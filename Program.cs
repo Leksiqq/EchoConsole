@@ -24,7 +24,6 @@ try
         byte[] buffer = new byte[1024];
         int len;
         MemoryStream ms = new();
-        int maxLineLength = 0;
         while ((len = accept.Receive(buffer)) > 0)
         {
             int numLines = 0;
@@ -66,7 +65,7 @@ finally
     int top;
     (_, top) = Console.GetCursorPosition();
     Console.SetCursorPosition(0, top - 1);
-    Console.WriteLine("                                                                                \rPress any key to close.");
+    Console.WriteLine("                                                                                            \rPress any key to close.");
     Console.ReadKey();
 }
 
