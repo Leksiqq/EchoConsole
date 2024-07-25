@@ -12,3 +12,4 @@ Java/Test/mylinkedmodapp
 var
 .config
 *.dll
+*.csproj.user

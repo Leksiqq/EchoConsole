@@ -15,27 +15,4 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="8.0.0" />
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <IsPackable>true</IsPackable>
-    <PackageOutputPath>../nuget.local</PackageOutputPath>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-
-    <Title>$(AssemblyName)</Title>
-    <Authors>leksiq</Authors>
-    <Copyright>Алексей Юрьевич Захаров &lt;leksi@leksi.net&gt;, 2024</Copyright>
-    <Version>1.0.2</Version>
-  </PropertyGroup>
-
-  <ItemGroup Condition="'$(Configuration)'=='Release'">
-    <Content Include="bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).exe">
-      <Pack>true</Pack>
-      <PackagePath>lib/$(TargetFramework)</PackagePath>
-      <IncludeInPackage>true</IncludeInPackage>
-      <CopyToOutput>true</CopyToOutput>
-      <BuildAction>Content</BuildAction>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>

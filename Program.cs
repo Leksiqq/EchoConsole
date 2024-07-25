@@ -34,10 +34,10 @@ try
                     string mess = Encoding.UTF8.GetString(ms.ToArray(), 0, (int)ms.Position);
                     string[] lines = mess.Split('\n');
                     Console.SetCursorPosition(0, 0);
-                    foreach(string line in lines)
+                    foreach (string line in lines)
                     {
                         Console.Write(string.Format("{0,80}\r", string.Empty));
-                        Console.Write(line);
+                        Console.WriteLine(line);
                     }
                     Console.WriteLine("Click left mouse button to pause, press ESC to continue.");
                     ms.Position = 0;
