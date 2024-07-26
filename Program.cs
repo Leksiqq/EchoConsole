@@ -9,6 +9,7 @@ if(!(configuration["socket-path"] is string socketPath && !string.IsNullOrEmpty(
 {
     return;
 }
+Console.CursorVisible = false;
 AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit;
 if (configuration["title"] is string s && !string.IsNullOrEmpty(s))
 {
