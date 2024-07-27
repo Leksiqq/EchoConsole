@@ -41,6 +41,11 @@ try
                         Console.WriteLine(line);
                     }
                     Console.WriteLine("Click left mouse button to pause, press ESC to continue.");
+                    for(int j = 0; j < 2; ++j)
+                    {
+                        Console.Write(string.Format("{0,80}\r", string.Empty));
+                        Console.WriteLine();
+                    }
                     ms.Position = 0;
                 }
                 else
